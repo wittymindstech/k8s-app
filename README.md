@@ -56,7 +56,56 @@ git clone https://github.com/kubernetes/kubernetes
 cd kubernetes
 make quick-release
 ```
+## Install kubectl to Create the nginx deployment 
+# On Mac
 
+```
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/amd64/kubectl"
+```
+
+```
+chmod +x ./kubectl
+```
+Move the kubectl binary to a file location on your system PATH.
+```
+sudo mv ./kubectl /usr/local/bin/kubectl
+sudo chown root: /usr/local/bin/kubectl
+```
+
+# On Linux 
+
+```
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+
+# Validate the Binary 
+
+```
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+```
+
+
+#  Complete Installation of  Kubectl on Linux
+```
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+
+
+# Provide execute permission to binary 
+
+```
+chmod +x kubectl
+mkdir -p ~/.local/bin
+mv ./kubectl ~/.local/bin/kubectl
+
+```
+# and then append (or prepend) ~/.local/bin to $PATH
+
+## Export the Kubeconfig file 
+
+```
+export KUBECONFIG=/path/to/config
+```
 
 ## Now Create the nginx deployment 
 
