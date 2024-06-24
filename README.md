@@ -114,6 +114,11 @@ kubectl create -f nginx.yaml
 ```
 For the full story, head over to the [developer's documentation].
 
+
+## Understand the Concept of Deployment 
+
+![k8S Deployment](nginx.png)
+
 ## Support
 
 If you need support, start with the [troubleshooting guide],
