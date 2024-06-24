@@ -114,6 +114,14 @@ kubectl create -f nginx.yaml
 ```
 For the full story, head over to the [developer's documentation].
 
+## Set the number of replicas by updating the below in nginx.yaml file
+
+```
+spec:
+
+  replicas: 3
+```
+
 
 ## Understand the Concept of Deployment 
 
