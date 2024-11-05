@@ -129,7 +129,7 @@ spec:
 
 ![k8S Deployment](nginx.png)
 
-## [Welcome to Support Section] 
+## [Section i want] 
 
 If you need support, start with the [troubleshooting guide],
 and work your way through the process that we've outlined.
